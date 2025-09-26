@@ -3,7 +3,7 @@ package com.example.praktikum2
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.*
@@ -14,13 +14,14 @@ import com.example.praktikum2.component.ItemInput
 import com.example.praktikum2.component.SearchInput
 import com.example.praktikum2.component.ShoppingList
 import com.example.praktikum2.component.Title
-import androidx.compose.runtime.Composable
+import com.example.praktikum2.ui.theme.Praktikum2Theme
+import androidx.compose.foundation.layout.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            ShoppingListTheme {
+            Praktikum2Theme(dynamicColor = false) {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
@@ -32,20 +33,6 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun ShoppingListTheme(
-    // Anda bisa menambahkan parameter seperti useDarkTheme: Boolean = isSystemInDarkTheme(),
-    content: @Composable () -> Unit
-) {
-    // Definisikan color scheme Anda di sini jika perlu
-    val colors = /* if (useDarkTheme) darkColorScheme() else */ MaterialTheme.colorScheme // Contoh
-
-    MaterialTheme(
-        colorScheme = colors,
-
-        content = content
-    )
-}
 
 @Composable
 fun ShoppingListApp() {
@@ -58,8 +45,9 @@ fun ShoppingListApp() {
             if (searchQuery.isBlank()) {
                 shoppingItems
             } else {
-                shoppingItems.filter { it.contains(searchQuery,
-                    ignoreCase = true) }
+                shoppingItems.filter {
+                    it.contains(searchQuery, ignoreCase = true)
+                }
             }
         }
     }

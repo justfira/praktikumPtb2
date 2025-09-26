@@ -7,25 +7,37 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val LightColorScheme = lightColorScheme(
-    primary = md_theme_light_primary,
-    onPrimary = md_theme_light_onPrimary,
-    secondary = md_theme_light_secondary,
-    background = md_theme_light_background,
-    onBackground = md_theme_light_onBackground
+    primary = GreenLight,
+    onPrimary = GreenOn,
+    primaryContainer = GreenPrimaryContainer,
+    onPrimaryContainer = GreenOnPrimaryContainer,
+    secondary = GreenSecondary,
+    secondaryContainer = GreenSecondaryContainer,
+    onSecondaryContainer = GreenOnSecondaryContainer,
+    background = GreenBackground,
+    onBackground = GreenOnBackground,
+    surface = GreenSurface,
+    onSurface = GreenOnSurface
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = md_theme_dark_primary,
-    onPrimary = md_theme_dark_onPrimary,
-    secondary = md_theme_dark_secondary,
-    background = md_theme_dark_background,
-    onBackground = md_theme_dark_onBackground
+    primary = GreenDark,
+    onPrimary = GreenOn,
+    primaryContainer = GreenDarkPrimaryContainer,
+    onPrimaryContainer = GreenDarkOnPrimaryContainer,
+    secondary = GreenSecondary, // bisa juga pakai GreenDarkSecondaryContainer kalau mau lebih kontras
+    secondaryContainer = GreenDarkSecondaryContainer,
+    onSecondaryContainer = GreenDarkOnSecondaryContainer,
+    background = GreenDarkBackground,
+    onBackground = GreenDarkOnBackground,
+    surface = GreenSurfaceDark,
+    onSurface = GreenOnSurfaceDark
 )
 
 @Composable
 fun Praktikum2Theme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

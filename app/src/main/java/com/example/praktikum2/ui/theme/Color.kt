@@ -2,16 +2,31 @@ package com.example.praktikum2.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
-// Light theme
-val md_theme_light_primary = Color(0xFF800000)
-val md_theme_light_onPrimary = Color.White
-val md_theme_light_secondary = Color(0xFF03DAC5)
-val md_theme_light_background = Color(0xFFFFFFFF)
-val md_theme_light_onBackground = Color(0xFF000000)
+val GreenLight = Color(0xFF4CAF50)
+val GreenOn = Color(0xFFFFFFFF)
+val GreenPrimaryContainer = Color(0xFFC8E6C9)
+val GreenOnPrimaryContainer = Color(0xFF1B5E20)
 
-// Dark theme
-val md_theme_dark_primary = Color(0xFFB03060)
-val md_theme_dark_onPrimary = Color.White
-val md_theme_dark_secondary = Color(0xFF03DAC5)
-val md_theme_dark_background = Color(0xFF121212)
-val md_theme_dark_onBackground = Color(0xFFFFFFFF)
+val GreenSecondary = Color(0xFF8BC34A)
+val GreenSecondaryContainer = Color(0xFFE6F4EA)
+val GreenOnSecondaryContainer = Color(0xFF2E7D32)
+
+val GreenBackground = Color(0xFFF1F8E9)
+val GreenOnBackground = Color(0xFF1C1B1F)
+
+val GreenSurface = Color(0xFFFFFFFF)
+val GreenOnSurface = Color(0xFF1C1B1F)
+
+
+val GreenDark = Color(0xFF388E3C)
+val GreenDarkPrimaryContainer = Color(0xFF1B5E20)
+val GreenDarkOnPrimaryContainer = Color(0xFFC8E6C9)
+
+val GreenDarkSecondaryContainer = Color(0xFF33691E)
+val GreenDarkOnSecondaryContainer = Color(0xFFDCE775)
+
+val GreenDarkBackground = Color(0xFF121212)
+val GreenDarkOnBackground = Color(0xFFE6E1E5)
+
+val GreenSurfaceDark = Color(0xFF1E1E1E)
+val GreenOnSurfaceDark = Color(0xFFE6E1E5)
